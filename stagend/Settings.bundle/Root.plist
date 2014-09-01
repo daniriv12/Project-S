@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Local notification</string>
+			<key>Key</key>
+			<string>localNotificationEnabled</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Language</string>
+			<key>Titles</key>
+			<array>
+				<string>it</string>
+				<string>de</string>
+				<string>fr</string>
+				<string>en</string>
+				<string>es</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>it</string>
+				<string>de</string>
+				<string>fr</string>
+				<string>en</string>
+				<string>es</string>
+			</array>
+			<key>Key</key>
+			<string>language</string>
+			<key>DefaultValue</key>
+			<string>en</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Radius</string>
+			<key>Titles</key>
+			<array>
+				<string>5 km</string>
+				<string>25 km</string>
+				<string>50 km</string>
+				<string>100 km</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>5</string>
+				<string>25</string>
+				<string>50</string>
+				<string>100</string>
+			</array>
+			<key>Key</key>
+			<string>radius</string>
+			<key>DefaultValue</key>
+			<string>25</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>After you change the language it is necessary to close and reopen the application.</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>To promote an event on the Stagend.com App, register for free with Stagend.com and add your concert.</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>Stagend.com</string>
+			<key>File</key>
+			<string>http://www.stagend.com/en/</string>
+			<key>Title</key>
+			<string>  </string>
+			<key>Type</key>
+			<string>IASKOpenURLSpecifier</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Root</string>
+</dict>
+</plist>
