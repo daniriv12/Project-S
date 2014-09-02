@@ -19,6 +19,9 @@
 #import "Club.h"
 #import "ArtistDetailsView.h"
 
+#import "DRActivityItemProvider.h"
+#import "DRWhatsapp.h"
+
 
 //Daniel Rivera
 #import "ArtistConcertsView.h"
@@ -553,9 +556,7 @@
     
     
     
-    NSString *textToShare = @"Concert coming up!";
-    
-    
+
     NSString * URL1 = @"https://www.stagend.com/event/";
     NSString * URL2 = [NSString stringWithFormat:@"%@%@",URL1,self.concert.concertId];
     
@@ -573,13 +574,28 @@
     
     
     
-   // NSArray *objectsToShare = @[textToShare, website, image];
-    //Daniel Rivera this looks better
-  //  NSArray *objectsToShare = @[textToShare, website];
+    NSString* text = [NSString stringWithFormat:@"%@ %@",website, @"#StagendConcert"];
     
-    NSArray *objectsToShare = @[website];
+    DRActivityItemProvider *twitTXT = [[DRActivityItemProvider alloc] initWithDefaultText:text];
+    DRActivityImageProvider *twitIMG = [[DRActivityImageProvider alloc] initWithDefaultImage:image];
+    DRActivityURLProvider *twitURL =[[DRActivityURLProvider alloc] initWithDefaultURL:website];
     
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    //TEXT for whatsapp message goes here
+    NSString* whatsappMessage = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Sharing concert", @""), website];
+    WhatsAppMessage *whatsappMsg = [[WhatsAppMessage alloc] initWithMessage:whatsappMessage forABID:nil];
+    
+    
+    
+    
+    
+    NSArray *objectsToShare = @[twitTXT, twitIMG, twitURL,whatsappMsg];
+    
+    
+    
+    NSArray *applicationActivities = @[[[DRWhatsapp alloc] init]];
+  
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:applicationActivities];
     
     NSArray *excludeActivities = @[UIActivityTypeAirDrop,
                                    UIActivityTypePrint,

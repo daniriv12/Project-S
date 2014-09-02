@@ -11,6 +11,9 @@
 		6593129F19AF6B9400CEF139 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593129E19AF6B9400CEF139 /* MessageUI.framework */; };
 		659312A119AF6BB100CEF139 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659312A019AF6BB100CEF139 /* CoreLocation.framework */; };
 		659FD09019A7CB8C0020F371 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 659FD08F19A7CB8C0020F371 /* Icon-120.png */; };
+		65CA160619B49A580020B9D0 /* DRActivityItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA160519B49A580020B9D0 /* DRActivityItemProvider.m */; };
+		65CA160919B5B6850020B9D0 /* DRWhatsapp.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA160819B5B6850020B9D0 /* DRWhatsapp.m */; };
+		65CA160B19B5B74F0020B9D0 /* whatsapp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65CA160A19B5B74F0020B9D0 /* whatsapp@2x.png */; };
 		74023A5314CB1D1A00F55F13 /* cellBackgroundHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 74023A5114CB1D1A00F55F13 /* cellBackgroundHeader.png */; };
 		74023A5414CB1D1A00F55F13 /* cellBackgroundHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74023A5214CB1D1A00F55F13 /* cellBackgroundHeader@2x.png */; };
 		742872B014D5B89100FD6BCF /* 11-x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742872AE14D5B89100FD6BCF /* 11-x.png */; };
@@ -192,6 +195,11 @@
 		65A803F5199BAD8200C36FE3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65A803F6199BAD8200C36FE3 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ClubDetailsView.xib; sourceTree = "<group>"; };
 		65A803F7199BAD8200C36FE3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		65CA160419B49A580020B9D0 /* DRActivityItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRActivityItemProvider.h; sourceTree = "<group>"; };
+		65CA160519B49A580020B9D0 /* DRActivityItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRActivityItemProvider.m; sourceTree = "<group>"; };
+		65CA160719B5B6850020B9D0 /* DRWhatsapp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRWhatsapp.h; sourceTree = "<group>"; };
+		65CA160819B5B6850020B9D0 /* DRWhatsapp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRWhatsapp.m; sourceTree = "<group>"; };
+		65CA160A19B5B74F0020B9D0 /* whatsapp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whatsapp@2x.png"; sourceTree = "<group>"; };
 		74023A5114CB1D1A00F55F13 /* cellBackgroundHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellBackgroundHeader.png; sourceTree = "<group>"; };
 		74023A5214CB1D1A00F55F13 /* cellBackgroundHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellBackgroundHeader@2x.png"; sourceTree = "<group>"; };
 		742872AE14D5B89100FD6BCF /* 11-x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-x.png"; sourceTree = "<group>"; };
@@ -479,6 +487,10 @@
 		65CA160019B47BD40020B9D0 /* Sharing */ = {
 			isa = PBXGroup;
 			children = (
+				65CA160419B49A580020B9D0 /* DRActivityItemProvider.h */,
+				65CA160519B49A580020B9D0 /* DRActivityItemProvider.m */,
+				65CA160719B5B6850020B9D0 /* DRWhatsapp.h */,
+				65CA160819B5B6850020B9D0 /* DRWhatsapp.m */,
 			);
 			path = Sharing;
 			sourceTree = "<group>";
@@ -760,6 +772,7 @@
 			isa = PBXGroup;
 			children = (
 				657CB5EE19A7490C00BDFDF0 /* Default-568h@2x.png */,
+				65CA160A19B5B74F0020B9D0 /* whatsapp@2x.png */,
 				CB3BB5891487C4F1005C2CC6 /* stagend */,
 				CB3BB5B51487C4F2005C2CC6 /* stagendTests */,
 				CB3BB5821487C4F1005C2CC6 /* Frameworks */,
@@ -1163,6 +1176,7 @@
 				7446928014BCA56200F201EA /* IASKAppSettingsView.xib in Resources */,
 				7446928114BCA56200F201EA /* IASKAppSettingsWebView.xib in Resources */,
 				7446928214BCA56200F201EA /* IASKPSSliderSpecifierViewCell.xib in Resources */,
+				65CA160B19B5B74F0020B9D0 /* whatsapp@2x.png in Resources */,
 				7446928314BCA56200F201EA /* IASKPSTextFieldSpecifierViewCell.xib in Resources */,
 				7446928414BCA56200F201EA /* IASKPSToggleSwitchSpecifierViewCell.xib in Resources */,
 				7446928514BCA56200F201EA /* IASKSpecifierValuesView.xib in Resources */,
@@ -1253,6 +1267,7 @@
 				D8E7FBEB148F841C00C87F83 /* Place.m in Sources */,
 				D80037FE1492299700BF7E76 /* SearchPlaceView.m in Sources */,
 				744A50F51492694E00B25A0C /* SearchArtistView.m in Sources */,
+				65CA160919B5B6850020B9D0 /* DRWhatsapp.m in Sources */,
 				744A50FB14926B1D00B25A0C /* SearchClubView.m in Sources */,
 				CB38F1B51493D09C00DBB687 /* Database.m in Sources */,
 				743421011494A3E30096B67E /* MBProgressHUD.m in Sources */,
@@ -1270,6 +1285,7 @@
 				74457757149F1A2500760AA8 /* ArtistConcertsView.m in Sources */,
 				74B48FB6149F262900EFF256 /* ClubConcertsView.m in Sources */,
 				74B48FBB149F3A8900EFF256 /* PlaceConcertsView.m in Sources */,
+				65CA160619B49A580020B9D0 /* DRActivityItemProvider.m in Sources */,
 				D86BC194149FDAFA00394BFC /* JCLLocalNotification.m in Sources */,
 				D8E257B514A1FC7800598972 /* ClubDetailsView.m in Sources */,
 				D8D8E87B14A49E9500D1ACA7 /* ClubCellView.m in Sources */,
@@ -1407,13 +1423,6 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Daniel/Desktop/gittry/Submodules/ShareKit/Frameworks,
-					/Users/Daniel/Desktop/gittry/Submodules/ShareKit/Frameworks/Pinterest.embeddedframework,
-					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks",
-					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks/Pinterest.embeddedframework",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "stagend/stagend-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1491,13 +1500,6 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Daniel/Desktop/gittry/Submodules/ShareKit/Frameworks,
-					/Users/Daniel/Desktop/gittry/Submodules/ShareKit/Frameworks/Pinterest.embeddedframework,
-					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks",
-					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks/Pinterest.embeddedframework",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "stagend/stagend-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1506,8 +1508,9 @@
 					"/Users/Daniel/Desktop/gittry/Submodules/ShareKit/**",
 				);
 				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"/Applications/Xcode6-Beta4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"<Multiple",
+					"values>",
+					"/Users/Daniel/Desktop/gittry/Submodules/ShareKit/**",
 				);
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "Submodules/**";
 				INFOPLIST_FILE = "stagend/stagend-Info.plist";
@@ -1612,13 +1615,6 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Daniel/Desktop/gittry/Submodules/ShareKit/Frameworks,
-					/Users/Daniel/Desktop/gittry/Submodules/ShareKit/Frameworks/Pinterest.embeddedframework,
-					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks",
-					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks/Pinterest.embeddedframework",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "stagend/stagend-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1653,13 +1649,6 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Daniel/Desktop/gittry/Submodules/ShareKit/Frameworks,
-					/Users/Daniel/Desktop/gittry/Submodules/ShareKit/Frameworks/Pinterest.embeddedframework,
-					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks",
-					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks/Pinterest.embeddedframework",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "stagend/stagend-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

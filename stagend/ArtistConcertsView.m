@@ -19,7 +19,10 @@
 #import "StagendDB.h"
 #import "Member.h"
 
+#import "DRActivityItemProvider.h"
+
 #import "ArtistDetailsView.h"
+#import "DRWhatsapp.h"
 
 @implementation ArtistConcertsView
 @synthesize table, imageView, artist, sections, nextBButton, prevBButton, isFromSearch, Hud, artists, currentArtist, noConcerts, addedToFavourites, isFromConcert;
@@ -655,9 +658,9 @@
 - (IBAction)shareButton
 {
     
-    NSString *artistName = artist.name;
+ //   NSString *artistName = artist.name;
     
-    NSString *textToShare = [NSString stringWithFormat:@"%@ %@", @"Check out", artistName];
+  //  NSString *textToShare = [NSString stringWithFormat:@"%@ %@", @"Check out", artistName];
     
     
     NSString * artistURL1 = @"https://www.stagend.com";
@@ -695,16 +698,25 @@
     
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
     
+    NSString* text = [NSString stringWithFormat:@"%@ %@",website, @"#StagendArtist"];
+    
+    DRActivityItemProvider2 *twitTXT = [[DRActivityItemProvider2 alloc] initWithDefaultText:text];
+    DRActivityImageProvider *twitIMG = [[DRActivityImageProvider alloc] initWithDefaultImage:image];
+    DRActivityURLProvider *twitURL =[[DRActivityURLProvider alloc] initWithDefaultURL:website];
+
+    NSString* whatsappMessage = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Sharing artist", @""), website];
+    WhatsAppMessage *whatsappMsg = [[WhatsAppMessage alloc] initWithMessage:whatsappMessage forABID:nil];
     
     
     
-//   NSArray *objectsToShare = @[textToShare, website, image];
     
- //   NSArray *objectsToShare = @[textToShare, website];
     
-    NSArray *objectsToShare = @[website];
+    NSArray *objectsToShare = @[twitTXT, twitIMG, twitURL,whatsappMsg];
     
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    NSArray *applicationActivities = @[[[DRWhatsapp alloc] init]];
+    
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:applicationActivities];
     
     NSArray *excludeActivities = @[UIActivityTypeAirDrop,
                                    UIActivityTypePrint,
