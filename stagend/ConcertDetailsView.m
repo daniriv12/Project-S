@@ -25,6 +25,8 @@
 
 //Daniel Rivera
 #import "ArtistConcertsView.h"
+#import "DRFacebookHolder.h"
+#import <Social/Social.h>
 
 
 @implementation ConcertDetailsView
@@ -592,7 +594,19 @@
     
     
     
-    NSArray *applicationActivities = @[[[DRWhatsapp alloc] init]];
+    NSArray *applicationActivities;
+    if (![SLComposeViewController isAvailableForServiceType: SLServiceTypeFacebook]){
+        applicationActivities = @[[[DRWhatsapp alloc] init], [DRFacebookHolder new]];
+      
+        
+        
+    }
+    else{
+        applicationActivities = @[[[DRWhatsapp alloc] init]];
+    
+    }
+    
+    
   
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:applicationActivities];

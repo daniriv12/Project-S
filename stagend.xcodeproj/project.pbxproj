@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6532903619B9B7120001376F /* DRFacebookHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6532903519B9B7120001376F /* DRFacebookHolder.m */; };
+		6532903819B9BFE70001376F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6532903719B9BFE70001376F /* Social.framework */; };
+		6532903A19B9C01C0001376F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6532903919B9C01C0001376F /* MobileCoreServices.framework */; };
+		6532903C19B9C44D0001376F /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6532903B19B9C44D0001376F /* facebook@2x.png */; };
+		6532903E19B9C6000001376F /* facebook2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6532903D19B9C6000001376F /* facebook2@2x.png */; };
 		657CB5EF19A7490C00BDFDF0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 657CB5EE19A7490C00BDFDF0 /* Default-568h@2x.png */; };
 		6593129F19AF6B9400CEF139 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593129E19AF6B9400CEF139 /* MessageUI.framework */; };
 		659312A119AF6BB100CEF139 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659312A019AF6BB100CEF139 /* CoreLocation.framework */; };
@@ -187,6 +192,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6532903419B9B7120001376F /* DRFacebookHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRFacebookHolder.h; sourceTree = "<group>"; };
+		6532903519B9B7120001376F /* DRFacebookHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRFacebookHolder.m; sourceTree = "<group>"; };
+		6532903719B9BFE70001376F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6532903919B9C01C0001376F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6532903B19B9C44D0001376F /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
+		6532903D19B9C6000001376F /* facebook2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook2@2x.png"; path = "../facebook2@2x.png"; sourceTree = "<group>"; };
 		657CB5EE19A7490C00BDFDF0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6593129E19AF6B9400CEF139 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		659312A019AF6BB100CEF139 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -461,6 +472,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6532903A19B9C01C0001376F /* MobileCoreServices.framework in Frameworks */,
+				6532903819B9BFE70001376F /* Social.framework in Frameworks */,
 				659312A119AF6BB100CEF139 /* CoreLocation.framework in Frameworks */,
 				6593129F19AF6B9400CEF139 /* MessageUI.framework in Frameworks */,
 				74B48FBD149F42F300EFF256 /* MapKit.framework in Frameworks */,
@@ -489,6 +502,8 @@
 			children = (
 				65CA160419B49A580020B9D0 /* DRActivityItemProvider.h */,
 				65CA160519B49A580020B9D0 /* DRActivityItemProvider.m */,
+				6532903419B9B7120001376F /* DRFacebookHolder.h */,
+				6532903519B9B7120001376F /* DRFacebookHolder.m */,
 				65CA160719B5B6850020B9D0 /* DRWhatsapp.h */,
 				65CA160819B5B6850020B9D0 /* DRWhatsapp.m */,
 			);
@@ -773,6 +788,8 @@
 			children = (
 				657CB5EE19A7490C00BDFDF0 /* Default-568h@2x.png */,
 				65CA160A19B5B74F0020B9D0 /* whatsapp@2x.png */,
+				6532903B19B9C44D0001376F /* facebook@2x.png */,
+				6532903D19B9C6000001376F /* facebook2@2x.png */,
 				CB3BB5891487C4F1005C2CC6 /* stagend */,
 				CB3BB5B51487C4F2005C2CC6 /* stagendTests */,
 				CB3BB5821487C4F1005C2CC6 /* Frameworks */,
@@ -792,6 +809,8 @@
 		CB3BB5821487C4F1005C2CC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6532903919B9C01C0001376F /* MobileCoreServices.framework */,
+				6532903719B9BFE70001376F /* Social.framework */,
 				659312A019AF6BB100CEF139 /* CoreLocation.framework */,
 				6593129E19AF6B9400CEF139 /* MessageUI.framework */,
 				74B48FBC149F42F200EFF256 /* MapKit.framework */,
@@ -1144,6 +1163,7 @@
 				7443D8FA148C056300D600BD /* 60-signpost.png in Resources */,
 				7443D8FB148C056300D600BD /* 60-signpost@2x.png in Resources */,
 				7443D8FE148C059600D600BD /* 66-microphone.png in Resources */,
+				6532903C19B9C44D0001376F /* facebook@2x.png in Resources */,
 				7443D8FF148C059600D600BD /* 66-microphone@2x.png in Resources */,
 				7457F3F0148E7B0700216DEC /* ConcertDetailsView.xib in Resources */,
 				D80037FF1492299700BF7E76 /* SearchPlaceView.xib in Resources */,
@@ -1172,6 +1192,7 @@
 				74A94C5E14BB7ED5009BCC7B /* Icon-Small@2x.png in Resources */,
 				74A94C5F14BB7ED5009BCC7B /* Icon.png in Resources */,
 				74A94C6014BB7ED5009BCC7B /* Icon@2x.png in Resources */,
+				6532903E19B9C6000001376F /* facebook2@2x.png in Resources */,
 				74A94C6114BB7ED5009BCC7B /* iTunesArtwork in Resources */,
 				7446928014BCA56200F201EA /* IASKAppSettingsView.xib in Resources */,
 				7446928114BCA56200F201EA /* IASKAppSettingsWebView.xib in Resources */,
@@ -1297,6 +1318,7 @@
 				CB4BB09214A7933900B360CA /* SDWebImageDownloader.m in Sources */,
 				CB4BB09314A7933900B360CA /* SDWebImageManager.m in Sources */,
 				CB4BB09414A7933900B360CA /* UIButton+WebCache.m in Sources */,
+				6532903619B9B7120001376F /* DRFacebookHolder.m in Sources */,
 				CB4BB09514A7933900B360CA /* UIImageView+WebCache.m in Sources */,
 				744D4E7714ADB35300961C72 /* ClubDB.m in Sources */,
 				74A1CE0314B38F8B00667908 /* PlaceCellView.m in Sources */,

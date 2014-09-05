@@ -23,6 +23,8 @@
 
 #import "ArtistDetailsView.h"
 #import "DRWhatsapp.h"
+#import <Social/Social.h>
+#import "DRFacebookHolder.h"
 
 @implementation ArtistConcertsView
 @synthesize table, imageView, artist, sections, nextBButton, prevBButton, isFromSearch, Hud, artists, currentArtist, noConcerts, addedToFavourites, isFromConcert;
@@ -40,6 +42,8 @@
         self.artists = nil;
         self.prevBButton = nil;
         self.nextBButton = nil;
+        
+        
         
         
         //Share button daniel rivera
@@ -704,16 +708,56 @@
     DRActivityImageProvider *twitIMG = [[DRActivityImageProvider alloc] initWithDefaultImage:image];
     DRActivityURLProvider *twitURL =[[DRActivityURLProvider alloc] initWithDefaultURL:website];
 
+    
+    
     NSString* whatsappMessage = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Sharing artist", @""), website];
     WhatsAppMessage *whatsappMsg = [[WhatsAppMessage alloc] initWithMessage:whatsappMessage forABID:nil];
     
+  /*
+    if (![SLComposeViewController isAvailableForServiceType: SLServiceTypeFacebook]){
+        
+        
+   
+        Hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+       
+        
+            Hud.mode = MBProgressHUDModeCustomView;
+            Hud.animationType = MBProgressHUDAnimationZoom;
+        
+            Hud.labelText = @"Attention: To share on facebook you must log in your device's settings.";
+            Hud.userInteractionEnabled = NO;
+            [self.navigationController.view addSubview:Hud];
+            [Hud show:YES];
+            [Hud hide:YES afterDelay:1.2];
+         
+   
+        
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Attention: "
+                                                          message:@"To share on facebook you must make sure you are logged in in your device's settings."
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        
+        [message show];
+        
+    }
     
-    
-    
-    
+    */
     NSArray *objectsToShare = @[twitTXT, twitIMG, twitURL,whatsappMsg];
     
-    NSArray *applicationActivities = @[[[DRWhatsapp alloc] init]];
+    
+    NSArray *applicationActivities;
+    if (![SLComposeViewController isAvailableForServiceType: SLServiceTypeFacebook]){
+        applicationActivities = @[[[DRWhatsapp alloc] init], [DRFacebookHolder new]];
+       
+        
+        
+    }
+    else{
+        applicationActivities = @[[[DRWhatsapp alloc] init]];
+     
+    }
+    
     
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:applicationActivities];
